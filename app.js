@@ -60,3 +60,7 @@ resultElement.addEventListener("keydown", (event) => {
 	// resultElement.value = "" // bu buradayken bastigim her tustan sonra bir onceki kayboluyor
 });
 
+const resim = document.querySelector(".img1");
+resim.addEventListener("click", function(event) {
+	resim.style.display = "none"
+});

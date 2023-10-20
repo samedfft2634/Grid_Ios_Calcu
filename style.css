@@ -15,7 +15,17 @@
 	top: 20%;
 	left: 40%;
 }
-
+.img1 {
+	/* display: none; */
+	cursor: pointer;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	transform: scale(1.5);
+	top: 15%;
+	left: 25%;
+	width: 200px;
+	z-index: 999;
+}
 .phone-container {
 	position: absolute;
 	background-color: #000;
@@ -26,6 +36,8 @@
 	border-radius: 30px;
 	padding: 5px;
 }
+
+
 
 .number-container {
 	display: grid;
@@ -87,11 +99,11 @@
 	right: 80px;
 	width: 220px;
 	height:150px;
-	border: 2px solid red;
+	/* border: 2px solid red; */
 }
 .result1 input {
-	border: 2px solid yellow;
-	/* border: none; */
+	/* border: 2px solid yellow; */
+	border: none;
 	outline: none;
 	background: transparent;
 	color: lime;
