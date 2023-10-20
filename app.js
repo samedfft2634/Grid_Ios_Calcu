@@ -1,4 +1,8 @@
 // app.js
+document.addEventListener("DOMContentLoaded", function () {
+    resultElement.focus();
+});
+
 const allClear = document.querySelector(".number1");
 const resultElement = document.querySelector(".result");
 const resultPre = document.querySelector(".result-pre");
@@ -23,7 +27,7 @@ numberContainer.addEventListener("click", (event) => {
 			} else {
 				currentCalculation = eval(currentCalculation);
 				resultPre.value = currentCalculation;
-				resultElement.value = "";
+				resultElement.value = "";				
 			}
 		} else if (buttonValue === "AC") {
 			currentCalculation = "";
@@ -36,4 +40,23 @@ numberContainer.addEventListener("click", (event) => {
 	}
 });
 
-// enter
+
+resultElement.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        if (resultElement.value === "" ) {
+            alert("Please enter a number");
+        } else {
+			try {
+                currentCalculation = eval(resultElement.value);
+                resultPre.value = currentCalculation;
+                resultElement.value = "";
+            } catch (error) {
+                alert("Invalid expression");
+                resultElement.value = "";
+
+            }
+        }
+    }
+	// resultElement.value = "" // bu buradayken bastigim her tustan sonra bir onceki kayboluyor
+});
+
