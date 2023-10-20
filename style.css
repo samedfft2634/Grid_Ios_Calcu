@@ -1,6 +1,8 @@
+
 * {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
+	
 }
 
 .container {
@@ -97,14 +99,21 @@
 	height: 50px;
 	font-size: 2rem;
 	text-align: right;
+	font-family: 'digital';
 }
 
 #previous {
 	border: 2px solid blue;
 	width: 45%;
-	font-size: 1rem;
+	font-size: 1.5rem;
 }
 
 .number-container {
 	user-select: none; /* Bu, metin seçimini engeller */
 }
+
+@font-face {
+	font-family: 'digital';
+	src: url(./digital-7.regular.ttf);
+}
+
