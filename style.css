@@ -70,17 +70,41 @@
 	background-color: #ff9f0a;
 }
 
-.result {
+.result1 {
 	background-color: transparent;
 	color: lime;
 	display: flex;
+	gap: 1rem;
+	flex-direction: column;
 	justify-content: right;
-	margin: 0 auto 20px;
-	font-size: 4rem;
+	align-items: end;
+	/* margin: 0 auto 20px; */
 	position: absolute;
 	z-index: 999;
-	top: 190px;
-	right: 95px;
-	width: 150px;
+	top: 150px;
+	right: 80px;
+	width: 220px;
+	height:100px;
+	border: 2px solid red;
+}
+.result1 input {
+	border: 2px solid yellow;
+	/* border: none; */
+	outline: none;
+	background: transparent;
+	color: lime;
+	width: 90%;
 	height: 50px;
+	font-size: 2rem;
+	text-align: right;
+}
+
+#previous {
+	border: 2px solid blue;
+	width: 45%;
+	font-size: 1rem;
+}
+
+.number-container {
+	user-select: none; /* Bu, metin seçimini engeller */
 }
