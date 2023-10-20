@@ -85,7 +85,7 @@
 	right: 80px;
 	width: 220px;
 	height:100px;
-	border: 2px solid red;
+	/* border: 2px solid red; */
 }
 .result1 input {
 	border: 2px solid yellow;
