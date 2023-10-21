@@ -21,6 +21,7 @@ numberContainer.addEventListener("click", (event) => {
 			} else if (buttonValue === "AC") {
 				currentCalculation = "";
 				resultElement.value = "";
+				resultPre.value = "";
 			} else if (buttonValue === "DEL") {
 				currentCalculation = currentCalculation.toString().slice(0, -1);
                 resultElement.value = currentCalculation
@@ -31,6 +32,7 @@ numberContainer.addEventListener("click", (event) => {
 			}
 		} else if (buttonValue === "AC") {
 			currentCalculation = "";
+			resultPre.value = "";
 		} else if (buttonValue === "DEL") {
 			currentCalculation = currentCalculation.toString().slice(0, -1);
 		} else {
@@ -53,7 +55,6 @@ resultElement.addEventListener("keydown", (event) => {
             } catch (error) {
                 alert("Invalid expression");
                 resultElement.value = "";
-
             }
         }
     }
@@ -61,6 +62,6 @@ resultElement.addEventListener("keydown", (event) => {
 });
 
 const resim = document.querySelector(".img1");
-resim.addEventListener("click", function(event) {
+resim.addEventListener("click", function() {
 	resim.style.display = "none"
 });
