@@ -105,4 +105,4 @@ resim.addEventListener("click", function () {
 	resim.style.display = "none";
 });
 
-resim.style.display = "none";
+
