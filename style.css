@@ -97,17 +97,17 @@
 	z-index: 999;
 	top: 100px;
 	right: 80px;
-	width: 220px;
+	width: 240px;
 	height:150px;
 	/* border: 2px solid red; */
 }
 .result1 input {
-	/* border: 2px solid yellow; */
-	border: none;
+	border: 2px solid yellow;
+	/* border: none; */
 	outline: none;
 	background: transparent;
 	color: lime;
-	width: 90%;
+	width: 100%;
 	height: 50px;
 	font-size: 3rem;
 	text-align: right;
@@ -116,7 +116,7 @@
 
 #previous {
 	/* border: 2px solid blue; */
-	width: 45%;
+	width: 100%;
 	font-size: 2rem;
 }
 
