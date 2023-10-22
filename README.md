@@ -14,6 +14,10 @@
 > [!IMPORTANT]
 > <a href="https://samedfft2634.github.io/Grid_Ios_Calcu/" >🔥LIVE🔥</a> <br>
 
+> [!WARNING]  
+> Self-assessment:
+> There are still many mistakes but it is verry good work for begginer level in JavaScript
+
 
 - [ ] Responsive
 - [x] Dynamic
