@@ -37,10 +37,13 @@ numberContainer.addEventListener("click", (event) => {
 			currentCalculation = currentCalculation.toString().slice(0, -1);
 			resultElement.value = currentCalculation;
 		} else {
-			const lastChar = currentCalculation.charAt(
-				currentCalculation.length - 1
-			);
-			if (!isOperator(lastChar) && isOperator(buttonValue)) {
+			const lastChar = currentCalculation.charAt(currentCalculation.length - 1);
+			if (!isOperator(lastChar) && buttonValue === "%") {
+				// Son eklenen karakter operatör değilse ve bu sefer "%" butonuna basıldıysa
+				currentCalculation = (parseFloat(currentCalculation) / 100).toString();
+				resultPre.value = currentCalculation;
+				resultElement.value = "";
+			} else if (!isOperator(lastChar) && isOperator(buttonValue)) {
 				// Son eklenen karakter operatör değilse ve bu sefer bir operatör ekleniyorsa
 				currentCalculation += buttonValue;
 				resultElement.value = currentCalculation;
@@ -48,14 +51,10 @@ numberContainer.addEventListener("click", (event) => {
 				// Son eklenen karakter operatör ise ve bu sefer de operatör ekleniyorsa
 				currentCalculation = currentCalculation.slice(0, -1) + buttonValue;
 				resultElement.value = currentCalculation;
-			} else {
-				if(buttonValue === "%"){
+			} else {		
 				currentCalculation += buttonValue;
 				resultElement.value = currentCalculation;
-				}
-				currentCalculation += buttonValue;
-				resultElement.value = currentCalculation;
-			}
+			}	
 		}
 	}
 });
@@ -89,3 +88,7 @@ resim.addEventListener("click", function () {
 });
 
 resim.style.display = "none";
+
+// else if (currentCalculation.includes(".")){
+
+// }
